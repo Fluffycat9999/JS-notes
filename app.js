@@ -36,3 +36,64 @@ y = x;
 z = y;
 q = z;
 console.log(z); */
+
+//////
+//if else statements
+
+/* let firstName = 'Paul';
+let status = 'married';
+
+if(status === 'single') {
+    console.log(`${firstName} is single and ready to mingle`);
+} else{
+    console.log(`Someone made a big mistake with ${firstName}`);
+} */
+
+/* const massRob = 78;
+const heightRob = 1.69;
+const massDejon = 92;
+const heightDejon = 1.95;
+
+let bmiRob = massRob / (heightRob * heightRob);
+let bmiDejon = massDejon / (heightDejon * heightDejon);
+
+if(bmiRob > bmiDejon) {
+    console.log('Rob is heavier');
+} else {
+    console.log('Dejon is heavier');
+} */
+
+/* let firstName = 'Sarah';
+let age = 17;
+
+if(age < 13) {
+    console.log(`${firstName} is a young lady`);
+} else if (age >= 13 && age < 20) {
+    console.log(`${firstName} is a teenager`);
+} else if (age >=20 && age < 30) {
+    console.log(`${firstName} is a young women`);
+} else {
+    console.log('She a boomer');
+} */
+
+
+/////Ternary Operator
+/* let firstName = 'Melkadze';
+let age = 17;
+
+age >= 21 ? console.log(`${firstName} will drink no no juice`) : console.log(`${firstName} will drink Chocy Milk`);
+     */
+//condition ? exprIfTrue : exprIfFalse
+
+/////Truthy and Falsey and equality operators
+
+//falsey values: null, 0, undefined, '', NaN
+//Truthy values: Anything not above this line
+
+let height = 22;
+
+if (height == '22') {
+    console.log('Hey this is type coercion!');
+} else {
+    console.log('No type coercion with triple ===');
+}
