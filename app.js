@@ -89,11 +89,37 @@ age >= 21 ? console.log(`${firstName} will drink no no juice`) : console.log(`${
 
 //falsey values: null, 0, undefined, '', NaN
 //Truthy values: Anything not above this line
-
+/* 
 let height = 22;
 
 if (height == '22') {
     console.log('Hey this is type coercion!');
 } else {
     console.log('No type coercion with triple ===');
+} */
+
+//////Functions
+function calculateAge(birthYear){
+    return 2019 - birthYear;
 }
+//functionCall(arguement goes here);  ex:calculateAge(2002);
+
+/* function noArg(){
+    console.log('something');
+}
+noArg(); */
+
+let galloBirth = 2002;
+const ageGallo = calculateAge(2002);
+const ageIlsa = calculateAge(2003);
+const ageThami = calculateAge(2004);
+//console.log(ageGallo, ageIlsa, ageThami);
+
+let firstName = 'Brendan';
+function yearsUntilRetire(year, firstName){
+    let age = calculateAge(year);
+    let retirement = 65 - age;
+
+    console.log(`${firstName} retires in ${ retirement} years`);
+}
+yearsUntilRetire(2002 , firstName);
