@@ -1,4 +1,4 @@
-/* //////Primitives
+/* //////PRIMITIVES
 let numbers = 4 ; //let values can be changed const can't
 let numbers - 5;
 let numbersArrays = [1,2,3,4,5];
@@ -37,8 +37,7 @@ z = y;
 q = z;
 console.log(z); */
 
-//////
-//if else statements
+////////IF ELSE STATEMENTS
 
 /* let firstName = 'Paul';
 let status = 'married';
@@ -77,7 +76,7 @@ if(age < 13) {
 } */
 
 
-/////Ternary Operator
+/////TERNARY OPERATOR
 /* let firstName = 'Melkadze';
 let age = 17;
 
@@ -85,7 +84,7 @@ age >= 21 ? console.log(`${firstName} will drink no no juice`) : console.log(`${
      */
 //condition ? exprIfTrue : exprIfFalse
 
-/////Truthy and Falsey and equality operators
+/////TRUTHY AND FALSEY AND EQUALITY OPERATORS
 
 //falsey values: null, 0, undefined, '', NaN
 //Truthy values: Anything not above this line
@@ -98,10 +97,10 @@ if (height == '22') {
     console.log('No type coercion with triple ===');
 } */
 
-//////Functions
-function calculateAge(birthYear){
+//////FUNCTIONS
+/* function calculateAge(birthYear){
     return 2019 - birthYear;
-}
+} */
 //functionCall(arguement goes here);  ex:calculateAge(2002);
 
 /* function noArg(){
@@ -109,7 +108,7 @@ function calculateAge(birthYear){
 }
 noArg(); */
 
-let galloBirth = 2002;
+/* let galloBirth = 2002;
 const ageGallo = calculateAge(2002);
 const ageIlsa = calculateAge(2003);
 const ageThami = calculateAge(2004);
@@ -119,7 +118,40 @@ let firstName = 'Brendan';
 function yearsUntilRetire(year, firstName){
     let age = calculateAge(year);
     let retirement = 65 - age;
-
     console.log(`${firstName} retires in ${ retirement} years`);
 }
-yearsUntilRetire(2002 , firstName);
+console.log(age);
+yearsUntilRetire(2002 , firstName); */
+
+//function whatDoYouDo(job, firstName){}; Function declaration without definition/ expression
+
+/* let whatDoYouDo = function(job, firstName){
+    switch(job){
+        case 'teacher':
+            return firstName + ' teachers children';
+        case 'driver':
+            return firstName + ' drivers people';
+        case 'designer':
+            return firstName + ' designers things';
+        default:
+            return firstName + ' is broke and homeless';
+    }
+}
+
+console.log(whatDoYouDo('teacher','Thami'));
+console.log(whatDoYouDo('driver', 'Veda'));
+console.log(whatDoYouDo('musician', 'Rob')); */
+
+//////Arrays
+//Initializing an array
+let names = ['Brian', 'Andrew', 'Winny', 'Kaey'];
+let numbers = [1,25,6,7,8];
+let crazyArray = ['string', 203, true];
+/*console.log(names[0]);
+console.log(names.length);
+
+names.forEach(function(el){
+    console.log(el);
+});*/
+
+names.push('Melkadze sir');
