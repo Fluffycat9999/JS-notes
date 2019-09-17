@@ -144,7 +144,7 @@ console.log(whatDoYouDo('musician', 'Rob')); */
 
 //////Arrays
 //Initializing an array
-let names = ['Brian', 'Andrew', 'Winny', 'Kai'];
+/* let names = ['Brian', 'Andrew', 'Winny', 'Kai'];
 let numbers = [1,25,6,7,8];
 let crazyArray = ['string', 203, true];
 /*console.log(names[0]);
@@ -152,10 +152,34 @@ console.log(names.length);
 
 names.forEach(function(el){
     console.log(el);
-});*/
+});
 
 names.push('Melkadze sir');
 
 const namePairs = [names[0] + names[1],
 names[2] + names[3]];
-console.log(namePairs);
+console.log(namePairs); */
+
+
+
+/////OBJECTS AND METHODS
+const spiderman = {
+    alias: 'Spider-man',
+    firstName: 'Peter',
+    lastName: 'Parker',
+    age: 16,
+    goodGuy: true,
+    location: {
+        state: 'NY',
+        city: 'NYC',
+    },
+    getBirthYear: function(){
+        return 2019 - this.age;
+    }
+}
+
+console.log(spiderman.location.city);
+
+const me = Object.create(spiderman);
+me.alias = 'Superman';
+console.log(me);
