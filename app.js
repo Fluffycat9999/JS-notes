@@ -163,6 +163,72 @@ console.log(namePairs); */
 
 
 /////OBJECTS AND METHODS
+/*const spiderman = {
+    alias: 'Spider-man',
+    firstName: 'Peter',
+    lastName: 'Parker',
+    age: 16,
+    goodGuy: true,
+    location: {
+        state: 'NY',
+        city: 'NYC',
+    },
+    getBirthYear: function(){
+        //return 2019 - this.age;
+        console.log(this);
+    }
+}
+spiderman.getBirthYear();
+console.log(spiderman.getBirthYear);
+
+const me = Object.create(spiderman);
+me.alias = 'Superman';
+console.log(me); */
+
+
+
+
+/////LOOPS/ITERATIONS
+/*const cars = ['Ford', 'Chevy','Honda', 'Toyota'];
+for (i = 0; i < cars.length; i++){
+    console.log(cars[i]);
+} 
+cars.forEach(function(car){   ///for can be written as a forEach
+    console.log(`${car}`);
+})*/
+
+
+/////HOISTING, SCOPE, EXECUTION STACK AKA JAVASCRIPT YOU DON'T SEE
+/* function test1(){
+    console.log('test1');
+    function test2(){
+        console.log('test2');
+        function test3(){
+            console.log('test3');
+        }test3();
+    }test2();
+}
+test1(); */
+
+///Hoisting
+/* test1(); /// its a funtion is can be hoisted
+notHoisted(); /// its not a function, but a variable so it needs to come after the variable
+
+function test1(){
+    console.log('This is hoisted?');
+}
+const notHoisted = function(){
+    console.log('Im not hoisted');
+} */
+
+
+
+//////this keyword
+/* function test1(){
+    console.log(this);
+};
+test1(); */
+
 const spiderman = {
     alias: 'Spider-man',
     firstName: 'Peter',
@@ -174,12 +240,17 @@ const spiderman = {
         city: 'NYC',
     },
     getBirthYear: function(){
-        return 2019 - this.age;
+        //return 2019 - this.age;
+        console.log(this);
     }
 }
+//this points to our object
+//spiderman.getBirthYear();
 
-console.log(spiderman.location.city);
-
-const me = Object.create(spiderman);
-me.alias = 'Superman';
-console.log(me);
+function Hero(alias, powers, age){
+    this.alias = alias;
+    this.powers = powers;
+    this.age = age;
+}
+const batman = new Hero('Batman', 'Wealthy', 44);
+console.log(batman);
