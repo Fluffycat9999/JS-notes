@@ -222,14 +222,13 @@ const notHoisted = function(){
 } */
 
 
-
 //////this keyword
 /* function test1(){
     console.log(this);
 };
 test1(); */
 
-const spiderman = {
+/* const spiderman = {
     alias: 'Spider-man',
     firstName: 'Peter',
     lastName: 'Parker',
@@ -253,4 +252,33 @@ function Hero(alias, powers, age){
     this.age = age;
 }
 const batman = new Hero('Batman', 'Wealthy', 44);
-console.log(batman);
+console.log(batman); */
+
+
+
+
+/////
+class Album {
+    constructor(title, artist, yearReleased){
+        this.title = title;
+        this.artist = artist;
+        this.yearReleased = yearReleased;
+    }
+    calcAge(){  //this is a method, which is a function inside a function, also to use it just write console.log(abbeyRoad.calcAge) and then it will work
+        return (new date().getFullYear() - this.yearReleased);
+    }
+     //instead of return you can use an arrow function, which apparently we don't know how to do so we are using return still
+}
+
+const abbeyRoad = new Album('Abbey Road', 'The Beatles', 1969); //Instantiate new album
+//const srgtPepper = new Album('Sergeant Pepper', 'Beatles', 1970);
+//console.log(abbeyRoad);
+
+class CD extends Album {
+    constructor(title, artist, yearReleased, digital){
+        super(title, artist, yearReleased); //super takes the 'this' from the Album so we don't have to write it all again
+        this.digital = digital;
+    }
+}
+
+
