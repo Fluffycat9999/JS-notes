@@ -257,7 +257,7 @@ console.log(batman); */
 
 
 
-/////
+///// CLASS
 class Album {
     constructor(title, artist, yearReleased){
         this.title = title;

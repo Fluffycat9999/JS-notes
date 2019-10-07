@@ -1,0 +1,22 @@
+{
+  "name": "js-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fluffycat9999/JS-notes.git"
+  },
+  "author": "Winny Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fluffycat9999/JS-notes/issues"
+  },
+  "homepage": "https://github.com/Fluffycat9999/JS-notes#readme",
+  "devDependencies": {
+    "tailwindcss": "^1.1.2"
+  }
+}
