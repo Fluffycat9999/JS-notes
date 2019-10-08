@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build:css": "tailwind build src/main.css -o dist/css/tailwind.css"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
