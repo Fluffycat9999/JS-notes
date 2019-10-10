@@ -265,7 +265,7 @@ console.log(batman); */
         this.yearReleased = yearReleased;
     }
     calcAge(){  //this is a method, which is a function inside a function, also to use it just write console.log(abbeyRoad.calcAge) and then it will work
-        return (new date().getFullYear() - this.yearReleased);
+        return (new Date().getFullYear() - this.yearReleased);
     }
      //instead of return you can use an arrow function, which apparently we don't know how to do so we are using return still
 }
@@ -322,3 +322,16 @@ console.log(Winny.calcBirthYear()); */
 
 
 //separate event handler for removing/deleting
+/* class UI{
+    
+} */
+
+
+
+
+//Challenge 2
+/* var found = comments.find(function(id) {
+    return id = 542328;
+});
+console.log(found); */
+
