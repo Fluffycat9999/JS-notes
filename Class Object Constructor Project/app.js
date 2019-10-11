@@ -1,4 +1,12 @@
 //one class to create the object person, album, movie ***Model
+const form = document.querySelector('#movie-form');
+const userTitle = document.querySelector('#title');
+const userYearReleased = document.querySelector('#yearReleased');
+const userDuration = document.querySelector('#duration');
+const userGenre = document.querySelector('#genre');
+const display = document.querySelector('.display');
+
+
 //take arguments
 class Movie{
     constructor(title, yearReleased, duration, genre){
@@ -15,6 +23,33 @@ class Movie{
 const rushHour = new Movie('Rush Hour', 1998, '1 hour 38 mins', 'Comedy/Thriller/Action');
 console.log(rushHour);
 console.log(rushHour.calcAge());
+
+function eventListeners(){
+    form.addEventListener('submit', displayAvengerMember);
+    display.addEventListener('click', removeAvenger);
+    
+    /* form.addEventListener('submit', function(){
+        console.log('test');
+    }); */
+}
+
+eventListeners();
+
+let html = '<div class="display-movie"> <div class="display-title"> %title%</div> <div class="display-yearReleased">%years% </div> <div class="display-duration">%duration% </div> <div class="display-genre">%genre% </div> <div class="remove-avenger"> <p class="remove-avenger">Remove Avenger &#10006;</p> </div> </div>'
+
+let newHtml= html.replace('%title%', userTitle.value);
+newHtml = newHtml.replace('%powers%', userPowers.value);
+newHtml = newHtml.replace('%name%', userFullName.value);
+newHtml = newHtml.replace('%years%', userFirstAppearance.value);
+newHtml = newHtml.replace('%url%', userImage.value);
+display.insertAdjacentHTML('beforeend', newHtml);
+
+/* console.log('hey please work');
+console.log(userAlias);  */
+e.preventDefault();
+
+
+
 
 //***View */ class for the UI which contains methods(user interface)
 /* class UI{
