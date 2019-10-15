@@ -14,10 +14,10 @@ class Movie{
         this.yearReleased = yearReleased;
         this.duration = duration;
         this.genre = genre;
-    }
+    }/* 
     calcAge(){ 
         return (new Date().getFullYear() - this.yearReleased);
-    }
+    } */
 }
 
 const rushHour = new Movie('Rush Hour', 1998, '1 hour 38 mins', 'Comedy/Thriller/Action');
@@ -25,28 +25,36 @@ console.log(rushHour);
 console.log(rushHour.calcAge());
 
 function eventListeners(){
-    form.addEventListener('submit', displayAvengerMember);
-    display.addEventListener('click', removeAvenger);
+    form.addEventListener('submit', displayMovie);
+    display.addEventListener('click', removeMovie);
     
-    /* form.addEventListener('submit', function(){
-        console.log('test');
-    }); */
+    form.addEventListener('submit', function(){
+        console.log('test'); 
+    });
+    function displayMovie(){
+        let html = '<div class="display-movie"> <div class="display-title"> %title%</div> <div class="display-yearReleased">%years% </div> <div class="display-duration">%duration% </div> <div class="display-genre">%genre% </div> <div class="remove-movie"> <p class="remove-movie">Remove Movie &#10006;</p> </div> </div>'
+
+        let newHtml= html.replace('%title%', userTitle.value);
+        newHtml = newHtml.replace('%years%', userYearReleased.value);
+        newHtml = newHtml.replace('%duration%', userDuration.value);
+        newHtml = newHtml.replace('%genre%', userGenre.value);
+        display.insertAdjacentHTML('beforeend', newHtml);
+    }
+    function removeMovie(e){
+        if(e.target.parentElement.classList.contains('remove-movie')){
+            e.target.parentElement.parentElement.remove();
+            console.log(e.target.parentElement);
+        }
+    }
 }
 
 eventListeners();
 
-let html = '<div class="display-movie"> <div class="display-title"> %title%</div> <div class="display-yearReleased">%years% </div> <div class="display-duration">%duration% </div> <div class="display-genre">%genre% </div> <div class="remove-avenger"> <p class="remove-avenger">Remove Avenger &#10006;</p> </div> </div>'
 
-let newHtml= html.replace('%title%', userTitle.value);
-newHtml = newHtml.replace('%powers%', userPowers.value);
-newHtml = newHtml.replace('%name%', userFullName.value);
-newHtml = newHtml.replace('%years%', userFirstAppearance.value);
-newHtml = newHtml.replace('%url%', userImage.value);
-display.insertAdjacentHTML('beforeend', newHtml);
 
 /* console.log('hey please work');
-console.log(userAlias);  */
-e.preventDefault();
+console.log(userTitle); */
+/* e.preventDefault(); */
 
 
 
@@ -76,3 +84,26 @@ e.preventDefault();
 
 
 //separate event handler for removing/deleting
+
+class UI{
+    addMovieToList(movie){
+        let html = '<div class="display-movie"> <div class="display-title"> %title%</div> <div class="display-yearReleased">%years% </div> <div class="display-duration">%duration% </div> <div class="display-genre">%genre% </div> <div class="remove-movie"> <p class="remove-movie">Remove Movie &#10006;</p> </div> </div>'
+
+        let newHtml= html.replace('%title%', userTitle.value);
+        newHtml = newHtml.replace('%years%', userYearReleased.value);
+        newHtml = newHtml.replace('%duration%', userDuration.value);
+        newHtml = newHtml.replace('%genre%', userGenre.value);
+        display.insertAdjacentHTML('beforeend', newHtml);
+
+    }
+}
+
+
+/* document.getElementById('form').addEventListener('submit', function(e)){
+    const form = document.querySelector('#movie-form');
+    const userTitle = document.querySelector('#title');
+    const userYearReleased = document.querySelector('#yearReleased');
+    const userDuration = document.querySelector('#duration');
+    const userGenre = document.querySelector('#genre');
+    const display = document.querySelector('.display');
+} */
