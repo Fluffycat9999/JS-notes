@@ -1,11 +1,11 @@
 //one class to create the object person, album, movie ***Model
 const movies = [];
-const form = document.querySelector('#movie-form');
+/* const form = document.querySelector('#movie-form');
 const userTitle = document.querySelector('#title');
 const userYearReleased = document.querySelector('#yearReleased');
 const userDuration = document.querySelector('#duration');
 const userGenre = document.querySelector('#genre');
-const display = document.querySelector('.display');
+const display = document.querySelector('.display'); */
 
 
 //take arguments
@@ -111,12 +111,18 @@ class UI{
     }
 }
 
-
 document.getElementById('form').addEventListener('submit', function(e){
-    const form = document.querySelector('#movie-form');
+    const form = document.querySelector('form').value;
     const userTitle = document.querySelector('#title');
     const userYearReleased = document.querySelector('#yearReleased');
     const userDuration = document.querySelector('#duration');
     const userGenre = document.querySelector('#genre');
     const display = document.querySelector('.display');
+
+    const ui = newUI();
+
+    ui.addMovieToList(movie);
+    ui.clearFields();
+    ui.removeMovie(e);
+    e.preventDefault();
 })
