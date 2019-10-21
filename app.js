@@ -327,11 +327,43 @@ console.log(Winny.calcBirthYear()); */
 } */
 
 
-
-
 //Challenge 2
 /* var found = comments.find(function(id) {
     return id = 542328;
 });
 console.log(found); */
 
+
+
+
+
+/////ASYNC
+/* const second = () => {
+    setTimeout(() => {
+        console.log('Async Hey there');
+    }, 2000);
+}
+const first = () => {
+    console.log('Hey there');
+    second(); //get data from server or api
+    console.log('The end');
+} */
+
+/* function getPkmn(){
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto/')
+    .then(result => result.json())
+    .then(data => console.log(data.abilities));
+}
+getPkmn(); */
+
+async function getPkmn(){
+    try{
+    const result = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    const data = await result.json();
+    console.log(data);
+
+    }catch (err){
+        console.log(err);
+    }
+}
+getPkmn();
